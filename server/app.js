@@ -20,7 +20,7 @@ app.use("/api/auth", authRoute);
 
 mongoose.connect(
   process.env.MongooDB_URL,
-  { useNewUrlParser: true, useUnifiedTopology: true },
+  { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false },
   () => {
     console.log("Successfully Connected to DataBase...");
   }

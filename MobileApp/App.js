@@ -4,9 +4,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import Login from './src/screen/Login';
-import Register from './src/screen/Register';
-import Profile from './src/screen/Profile';
+import Login from './src/screens/auth/AuthScreen';
+import Profile from './src/screens/Profile/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -29,7 +28,7 @@ const MyTabs = () => {
       />
       <Tab.Screen
         name="Notifications"
-        component={Register}
+        component={Login}
         options={{
           tabBarLabel: 'Updates',
           tabBarIcon: ({color, size}) => (

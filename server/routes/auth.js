@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const User = require("../models/user");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
 //Register
 router.post("/register", async (req, res) => {
@@ -35,6 +36,9 @@ router.post("/login", async (req, res) => {
       user.password
     );
     !validPassword && res.status(400).json("Entered Wrong password");
+
+    const token = await user.generateAuthToken();
+    console.log(token);
 
     res.status(200).json(user);
   } catch (err) {

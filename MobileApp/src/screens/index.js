@@ -4,8 +4,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import Login from './src/screens/auth/AuthScreen';
-import Profile from './src/screens/Profile/ProfileScreen';
+import Login from './auth/AuthScreen';
+import Profile from './Profile/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   StyleSheet,
@@ -8,6 +8,8 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+import {postUserRegistration} from '../../services/auth';
 
 // import {
 //   GoogleSignin,
@@ -29,6 +31,35 @@ const Login = () => {
   //     googleServicePlistPath: '', // [iOS] optional, if you renamed your GoogleService-Info file, new name here, e.g. GoogleService-Info-Staging
   //   });
   // }, [])
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const nameChangeHandler = name => {
+    setName(name);
+  };
+
+  const emailChangeHandler = email => {
+    setEmail(email);
+  };
+
+  const passwordChangeHandler = password => {
+    setPassword(password);
+  };
+
+  const onRegisterHandler = () => {
+    const dataToSend = {
+      username: name,
+      email: email,
+      password: password,
+    };
+
+    postUserRegistration(dataToSend).then(response => {
+      console.log('response', response);
+    });
+  };
+
   return (
     <View style={styles.container}>
       <Image style={styles.bgImage} source={require('../../../unnamed.jpg')} />
@@ -38,9 +69,24 @@ const Login = () => {
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.inputs}
+          placeholder="Username"
+          keyboardType="email-address"
+          underlineColorAndroid="transparent"
+          onChangeText={nameChangeHandler}
+        />
+        <MaterialCommunityIcons
+          style={styles.inputIcon}
+          name="account"
+          size={25}
+        />
+      </View>
+      <View style={styles.inputContainer}>
+        <TextInput
+          style={styles.inputs}
           placeholder="Email"
           keyboardType="email-address"
           underlineColorAndroid="transparent"
+          onChangeText={emailChangeHandler}
         />
         <MaterialCommunityIcons
           style={styles.inputIcon}
@@ -55,6 +101,7 @@ const Login = () => {
           placeholder="Password"
           secureTextEntry={true}
           underlineColorAndroid="transparent"
+          onChangeText={passwordChangeHandler}
         />
         <MaterialCommunityIcons
           style={styles.inputIcon}
@@ -69,7 +116,7 @@ const Login = () => {
 
       <TouchableOpacity
         style={[styles.buttonContainer, styles.loginButton]}
-        onPress={() => {}}>
+        onPress={onRegisterHandler}>
         <Text style={styles.loginText}>Register</Text>
       </TouchableOpacity>
 

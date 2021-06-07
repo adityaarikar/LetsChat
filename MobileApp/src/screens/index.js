@@ -113,7 +113,8 @@ const ProfileScreenContainer = () => {
 export default function App() {
   return (
     <NavigationContainer>
-      <MyTabs />
+      {/* <MyTabs /> */}
+      <LoginScreen />
     </NavigationContainer>
   );
 }

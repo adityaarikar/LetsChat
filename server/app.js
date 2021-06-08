@@ -29,5 +29,5 @@ mongoose.connect(
 );
 
 app.listen(8080, () => {
-  console.log("Sussefully connected to server...");
+  console.log("Successfully connected to server...");
 });

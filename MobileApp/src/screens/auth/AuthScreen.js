@@ -55,9 +55,7 @@ const Login = () => {
       password: password,
     };
 
-    postUserRegistration(dataToSend).then(response => {
-      console.log('response', response);
-    });
+    postUserRegistration(dataToSend);
   };
 
   return (

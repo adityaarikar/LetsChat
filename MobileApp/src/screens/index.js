@@ -5,7 +5,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import LoginScreen from './auth/AuthScreen';
+import AuthScreen from './auth/AuthScreen';
 import HomeScreen from './home/HomeScreen';
 import ChatScreen from './chat/ChatScreen';
 import FriendsScreen from './friends/FriendsScreen';
@@ -114,7 +114,7 @@ export default function App() {
   return (
     <NavigationContainer>
       {/* <MyTabs /> */}
-      <LoginScreen />
+      <AuthScreen />
     </NavigationContainer>
   );
 }

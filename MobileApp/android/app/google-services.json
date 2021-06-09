@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "688131229927",
+    "project_id": "lets-chat-3c840",
+    "storage_bucket": "lets-chat-3c840.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688131229927:android:9b1b7c8ae7b82eb7c8ba42",
+        "android_client_info": {
+          "package_name": "adi.mobileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688131229927-vbubbtoalvqau7nekeu2rtn14b3jcdk7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "adi.mobileapp",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "688131229927-46ek5k33b0m3f45pvdd41th1fv445t31.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTFi8sBlRJItwg3LinVCcK4fGzA5izg08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "688131229927-46ek5k33b0m3f45pvdd41th1fv445t31.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

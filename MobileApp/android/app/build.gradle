@@ -132,7 +132,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.mobileapp"
+        applicationId "adi.mobileapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -186,6 +186,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
+    // implementation(project(":react-native-google-signin")) 
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
 

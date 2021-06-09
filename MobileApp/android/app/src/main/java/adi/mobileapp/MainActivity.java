@@ -1,4 +1,4 @@
-package com.mobileapp;
+package adi.mobileapp;
 import android.os.Bundle;
 import com.facebook.react.ReactActivity;
 import com.zoontek.rnbootsplash.RNBootSplash;

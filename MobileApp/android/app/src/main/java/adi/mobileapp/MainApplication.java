@@ -1,4 +1,4 @@
-package com.mobileapp;
+package adi.mobileapp;
 
 import android.app.Application;
 import android.content.Context;
